@@ -11,6 +11,17 @@ public class App {
         int numberOfEntries;
         
         numberOfEntries = sc.nextInt();
+
+        if(numberOfEntries <= 1){
+            System.out.println("O número deve ser positivo e maior que 1");
+            sc.close();
+            return;
+        }
+        else if(numberOfEntries > 100000){
+            System.out.println("O número não pode ser maior que 100000");
+            sc.close();
+            return;
+        }
     
         int[] values = new int[numberOfEntries];
         List<Integer> evenNumbers = new ArrayList<>();
